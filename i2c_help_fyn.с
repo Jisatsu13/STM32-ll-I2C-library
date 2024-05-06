@@ -5,7 +5,7 @@
  */
 void I2C_Start (I2C_TypeDef *I2Cx)
 {
-	LL_I2C_AcknowledgeNextData(I2Cx, LL_I2C_ACK); // Enable the ACK
+  LL_I2C_AcknowledgeNextData(I2Cx, LL_I2C_ACK); // Enable the ACK
   LL_I2C_GenerateStartCondition(I2Cx);          // Generate START
   while(!LL_I2C_IsActiveFlag_SB(I2Cx)){};
 }
