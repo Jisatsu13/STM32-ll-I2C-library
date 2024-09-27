@@ -8,6 +8,7 @@
 #define I2C_REQUEST_READ                        0x01
 
 void I2C_WriteData (I2C_TypeDef *I2Cx,uint8_t Address, uint8_t Reg, uint8_t Data);
+void I2C_MultyWriteData(I2C_TypeDef *I2Cx, uint8_t Address, uint8_t Reg, uint8_t *Data, uint16_t size);
 void I2C_ReadData (I2C_TypeDef *I2Cx, uint8_t Address, uint8_t Reg, uint8_t *buffer, uint8_t size);
 
 #endif
